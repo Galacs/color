@@ -1,13 +1,12 @@
 export THEOS_PACKAGE_SCHEME=rootless
-export TARGET = iphone:clang:13.7:13.0
-
+export TARGET = iphone:clang:13.7:14
 include $(THEOS)/makefiles/common.mk
 
 export ARCHS = arm64 arm64e
 
 BUNDLE_NAME = ColorMyBattery
 ColorMyBattery_FILES = ColorMyBattery.m
-ColorMyBattery_INSTALL_PATH = /var/jb/Library/PreferenceBundles
+ColorMyBattery_INSTALL_PATH = /Library/PreferenceBundles
 ColorMyBattery_FRAMEWORKS = UIKit CoreGraphics QuartzCore
 ColorMyBattery_PRIVATE_FRAMEWORKS = Preferences
 ColorMyBattery_LIBRARIES = colorpicker
